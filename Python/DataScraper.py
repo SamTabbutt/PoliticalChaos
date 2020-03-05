@@ -12,7 +12,7 @@ import os
 
 
 link = 'https://www.realclearpolitics.com/epolls/2020/president/ca/california_democratic_primary-6879.html'
-local_dir = os.path.dirname(os.path.realpath(__file__))
+local_dir = os.path.dirname(os.path.realpath(__file__)+ os.sep + os.pardir)
 
 
 def getHTMLContent(link):

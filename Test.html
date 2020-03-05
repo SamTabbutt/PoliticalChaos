@@ -4,19 +4,28 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
         <script src="https://d3js.org/d3.v5.js"></script>
-
         <script src="https://d3js.org/d3.v5.min.js"></script>
  
     </head>
 
     <body>
 
-        <div id="test">Table Siplay</div>
-        <button id='load' type="button" onclick="ReturnLinear()">Load Data</button>
-        <table id="t"></table>
+        <h1 id="test">Test Page</h1>
 
+        <label for='Candidate'>Select a Candidate</label>
+        <select id='Candidate'></select><br>
+        <label for='delegateCount'>Total Delegate Count to Date:</label>
+        <div class = 'Candidate' id='delegateCount'>No Selection</div>
+        <label for='dropped'>The candidate is dropped from the race:</label>
+        <div class = 'Candidate' id='dropped'>No Selection</div>
 
-        <script src="ChaosFunctions.js"></script>
+        <label for='state'>Select state of interest:</label>
+        <select id='state'></select>
+        <label for='voteCount'>Number of Votes</label>
+        <div class = 'state' id='voteCount'>No Selection</div>
+
+        <script src="js/ChaosFunctions.js"></script>
+        <script src="js/DataReader.js"></script>
 
 
 

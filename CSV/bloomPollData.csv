@@ -1,0 +1,121 @@
+,key,state,pct_vote,vote_count,del,super_del,delegates_total,Candidate,dropped_out,drop_date
+0,Feb 03,Iowa,26.2,563.0,14,0,26,Buttigieg,True,03/01/2020
+1,Feb 11,New Hampshire,24.4,72457.0,9,0,26,Buttigieg,True,03/01/2020
+2,Feb 22,Nevada,14.3,2073.0,3,0,26,Buttigieg,True,03/01/2020
+3,Feb 29,South Carolina,8.2,43606.0,0,0,26,Buttigieg,True,03/01/2020
+4,Mar 03,Alabama,0.3,1416.0,0,0,26,Buttigieg,True,03/01/2020
+5,Mar 03,American Samoa,0.0,,0,0,26,Buttigieg,True,03/01/2020
+6,Mar 03,Arkansas,3.4,7657.0,0,0,26,Buttigieg,True,03/01/2020
+7,Mar 03,California,6.2,192778.0,0,0,26,Buttigieg,True,03/01/2020
+8,Mar 03,Colorado,0.0,0.0,0,0,26,Buttigieg,True,03/01/2020
+9,Mar 03,Democrats Abroad,0.0,,0,0,26,Buttigieg,True,03/01/2020
+10,Mar 03,Maine,2.1,4180.0,0,0,26,Buttigieg,True,03/01/2020
+11,Mar 03,Massachusetts,2.7,37172.0,0,0,26,Buttigieg,True,03/01/2020
+12,Mar 03,Minnesota,1.0,7627.0,0,0,26,Buttigieg,True,03/01/2020
+13,Mar 03,North Carolina,3.3,43368.0,0,0,26,Buttigieg,True,03/01/2020
+14,Mar 03,Oklahoma,1.7,5113.0,0,0,26,Buttigieg,True,03/01/2020
+15,Mar 03,Tennessee,3.3,17051.0,0,0,26,Buttigieg,True,03/01/2020
+16,Mar 03,Texas,4.0,82221.0,0,0,26,Buttigieg,True,03/01/2020
+17,Mar 03,Utah,9.8,17697.0,0,0,26,Buttigieg,True,03/01/2020
+18,Mar 03,Vermont,2.4,3714.0,0,0,26,Buttigieg,True,03/01/2020
+19,Mar 03,Virginia,0.8,11190.0,0,0,26,Buttigieg,True,03/01/2020
+0,Feb 03,Iowa,26.1,562.0,12,0,538,Sanders,False,
+1,Feb 11,New Hampshire,25.7,76324.0,9,0,538,Sanders,False,
+2,Feb 22,Nevada,46.8,6788.0,24,0,538,Sanders,False,
+3,Feb 29,South Carolina,19.9,105197.0,15,0,538,Sanders,False,
+4,Mar 03,Alabama,16.5,74755.0,7,0,538,Sanders,False,
+5,Mar 03,American Samoa,0.0,,0,0,538,Sanders,False,
+6,Mar 03,Arkansas,22.4,51117.0,9,0,538,Sanders,False,
+7,Mar 03,California,33.8,1057287.0,155,0,538,Sanders,False,
+8,Mar 03,Colorado,36.1,282462.0,20,0,538,Sanders,False,
+9,Mar 03,Democrats Abroad,0.0,,0,0,538,Sanders,False,
+10,Mar 03,Maine,32.9,65894.0,9,0,538,Sanders,False,
+11,Mar 03,Massachusetts,26.7,373173.0,29,0,538,Sanders,False,
+12,Mar 03,Minnesota,29.9,222530.0,27,0,538,Sanders,False,
+13,Mar 03,North Carolina,24.1,318872.0,35,0,538,Sanders,False,
+14,Mar 03,Oklahoma,25.4,77302.0,13,0,538,Sanders,False,
+15,Mar 03,Tennessee,25.0,128688.0,18,0,538,Sanders,False,
+16,Mar 03,Texas,30.0,622360.0,102,0,538,Sanders,False,
+17,Mar 03,Utah,34.6,62786.0,12,0,538,Sanders,False,
+18,Mar 03,Vermont,50.8,80121.0,11,0,538,Sanders,False,
+19,Mar 03,Virginia,23.1,306024.0,31,0,538,Sanders,False,
+0,Feb 03,Iowa,18.0,388.0,8,0,68,Warren,True,03/05/2020
+1,Feb 11,New Hampshire,9.2,27387.0,0,0,68,Warren,True,03/05/2020
+2,Feb 22,Nevada,9.7,1406.0,0,0,68,Warren,True,03/05/2020
+3,Feb 29,South Carolina,7.1,37346.0,0,0,68,Warren,True,03/05/2020
+4,Mar 03,Alabama,5.7,25847.0,0,0,68,Warren,True,03/05/2020
+5,Mar 03,American Samoa,0.0,,0,0,68,Warren,True,03/05/2020
+6,Mar 03,Arkansas,10.0,22860.0,0,0,68,Warren,True,03/05/2020
+7,Mar 03,California,12.2,381965.0,9,0,68,Warren,True,03/05/2020
+8,Mar 03,Colorado,17.3,135013.0,1,0,68,Warren,True,03/05/2020
+9,Mar 03,Democrats Abroad,0.0,,0,0,68,Warren,True,03/05/2020
+10,Mar 03,Maine,15.7,31514.0,4,0,68,Warren,True,03/05/2020
+11,Mar 03,Massachusetts,21.4,299733.0,25,0,68,Warren,True,03/05/2020
+12,Mar 03,Minnesota,15.4,114754.0,10,0,68,Warren,True,03/05/2020
+13,Mar 03,North Carolina,10.5,138502.0,2,0,68,Warren,True,03/05/2020
+14,Mar 03,Oklahoma,13.4,40676.0,1,0,68,Warren,True,03/05/2020
+15,Mar 03,Tennessee,10.4,53555.0,1,0,68,Warren,True,03/05/2020
+16,Mar 03,Texas,11.4,237028.0,5,0,68,Warren,True,03/05/2020
+17,Mar 03,Utah,15.5,28178.0,0,0,68,Warren,True,03/05/2020
+18,Mar 03,Vermont,12.6,19816.0,0,0,68,Warren,True,03/05/2020
+19,Mar 03,Virginia,10.7,142470.0,2,0,68,Warren,True,03/05/2020
+0,Feb 03,Iowa,15.8,340.0,6,0,603,Biden,False,
+1,Feb 11,New Hampshire,8.4,24921.0,0,0,603,Biden,False,
+2,Feb 22,Nevada,20.2,2927.0,9,0,603,Biden,False,
+3,Feb 29,South Carolina,48.4,256047.0,39,0,603,Biden,False,
+4,Mar 03,Alabama,63.3,286065.0,41,0,603,Biden,False,
+5,Mar 03,American Samoa,0.0,,0,0,603,Biden,False,
+6,Mar 03,Arkansas,40.5,92586.0,17,0,603,Biden,False,
+7,Mar 03,California,25.1,784341.0,93,0,603,Biden,False,
+8,Mar 03,Colorado,23.6,184262.0,9,0,603,Biden,False,
+9,Mar 03,Democrats Abroad,0.0,,0,0,603,Biden,False,
+10,Mar 03,Maine,34.1,68396.0,11,0,603,Biden,False,
+11,Mar 03,Massachusetts,33.6,470294.0,37,0,603,Biden,False,
+12,Mar 03,Minnesota,38.6,287464.0,38,0,603,Biden,False,
+13,Mar 03,North Carolina,43.0,568581.0,65,0,603,Biden,False,
+14,Mar 03,Oklahoma,38.7,117552.0,21,0,603,Biden,False,
+15,Mar 03,Tennessee,41.7,215005.0,33,0,603,Biden,False,
+16,Mar 03,Texas,34.5,716030.0,111,0,603,Biden,False,
+17,Mar 03,Utah,17.4,31571.0,2,0,603,Biden,False,
+18,Mar 03,Vermont,22.0,34734.0,5,0,603,Biden,False,
+19,Mar 03,Virginia,53.2,705800.0,66,0,603,Biden,False,
+0,Feb 03,Iowa,12.3,264.0,1,0,7,Klobuchar,True,03/02/2020
+1,Feb 11,New Hampshire,19.8,58796.0,6,0,7,Klobuchar,True,03/02/2020
+2,Feb 22,Nevada,4.2,603.0,0,0,7,Klobuchar,True,03/02/2020
+3,Feb 29,South Carolina,3.2,16677.0,0,0,7,Klobuchar,True,03/02/2020
+4,Mar 03,Alabama,0.2,907.0,0,0,7,Klobuchar,True,03/02/2020
+5,Mar 03,American Samoa,0.0,,0,0,7,Klobuchar,True,03/02/2020
+6,Mar 03,Arkansas,3.1,7014.0,0,0,7,Klobuchar,True,03/02/2020
+7,Mar 03,California,3.1,95748.0,0,0,7,Klobuchar,True,03/02/2020
+8,Mar 03,Colorado,0.0,0.0,0,0,7,Klobuchar,True,03/02/2020
+9,Mar 03,Democrats Abroad,0.0,,0,0,7,Klobuchar,True,03/02/2020
+10,Mar 03,Maine,1.4,2744.0,0,0,7,Klobuchar,True,03/02/2020
+11,Mar 03,Massachusetts,1.2,16862.0,0,0,7,Klobuchar,True,03/02/2020
+12,Mar 03,Minnesota,5.6,41508.0,0,0,7,Klobuchar,True,03/02/2020
+13,Mar 03,North Carolina,2.3,30641.0,0,0,7,Klobuchar,True,03/02/2020
+14,Mar 03,Oklahoma,2.2,6728.0,0,0,7,Klobuchar,True,03/02/2020
+15,Mar 03,Tennessee,2.1,10645.0,0,0,7,Klobuchar,True,03/02/2020
+16,Mar 03,Texas,2.1,43027.0,0,0,7,Klobuchar,True,03/02/2020
+17,Mar 03,Utah,3.9,7047.0,0,0,7,Klobuchar,True,03/02/2020
+18,Mar 03,Vermont,1.3,2023.0,0,0,7,Klobuchar,True,03/02/2020
+19,Mar 03,Virginia,0.6,8413.0,0,0,7,Klobuchar,True,03/02/2020
+0,Feb 03,Iowa,1.0,22.0,0,0,0,Yang,True,02/11/2020
+1,Feb 11,New Hampshire,2.8,8315.0,0,0,0,Yang,True,02/11/2020
+2,Feb 22,Nevada,0.0,1.0,0,0,0,Yang,True,02/11/2020
+3,Feb 29,South Carolina,0.2,1045.0,0,0,0,Yang,True,02/11/2020
+4,Mar 03,Alabama,0.2,875.0,0,0,0,Yang,True,02/11/2020
+5,Mar 03,American Samoa,0.0,,0,0,0,Yang,True,02/11/2020
+6,Mar 03,Arkansas,0.3,730.0,0,0,0,Yang,True,02/11/2020
+7,Mar 03,California,1.0,30370.0,0,0,0,Yang,True,02/11/2020
+8,Mar 03,Colorado,0.4,3517.0,0,0,0,Yang,True,02/11/2020
+9,Mar 03,Democrats Abroad,0.0,,0,0,0,Yang,True,02/11/2020
+10,Mar 03,Maine,0.3,670.0,0,0,0,Yang,True,02/11/2020
+11,Mar 03,Massachusetts,0.2,2621.0,0,0,0,Yang,True,02/11/2020
+12,Mar 03,Minnesota,0.2,1755.0,0,0,0,Yang,True,02/11/2020
+13,Mar 03,North Carolina,0.2,3021.0,0,0,0,Yang,True,02/11/2020
+14,Mar 03,Oklahoma,0.7,1993.0,0,0,0,Yang,True,02/11/2020
+15,Mar 03,Tennessee,0.2,1097.0,0,0,0,Yang,True,02/11/2020
+16,Mar 03,Texas,0.3,6673.0,0,0,0,Yang,True,02/11/2020
+17,Mar 03,Utah,0.5,827.0,0,0,0,Yang,True,02/11/2020
+18,Mar 03,Vermont,0.4,589.0,0,0,0,Yang,True,02/11/2020
+19,Mar 03,Virginia,0.3,3364.0,0,0,0,Yang,True,02/11/2020

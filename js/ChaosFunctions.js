@@ -27,7 +27,7 @@ class aisSys{
         var dt = .01;
         var sequence = [X0];
         var t = 0;
-        var tfin = 30;
+        var tfin = 700;
         let X = X0
         while (t<tfin){
             var dX = this.f(X,this.currentVars);
@@ -44,6 +44,7 @@ class aisSys{
         var X0 = [.1,0,.1]
         var change = lim/freq;
         var bif = [];
+        var paramvals = []
         while (this.currentVars[varInd]<lim){
             var indList = [];
             var curOrb = this.generateOrbit(X0);
@@ -54,6 +55,7 @@ class aisSys{
                 }
             }
             bif.push(indList);
+            paramvals.push(this.currentVars[varInd])
             this.alterVarsByIndex(varInd,this.currentVars[varInd]+change);
         }
         return bif;
@@ -144,3 +146,46 @@ function ReturnLinear() {
   }
 
 
+$( document ).ready(function() {
+    console.log( "ready!" );
+    let system = new arnSys();
+    var x = system.generateOrbit([0,0.1,0]);
+    var svg = d3.select("body")
+            .append("svg")
+            .attr("width", 500)
+            .attr("height", 500);
+    var xScale = d3.scaleLinear()
+            .domain([-10,10])
+            .range([0, 500]);
+    var yScale = d3.scaleLinear()
+            .domain([-10,10])
+            .range([0, 500]);
+    var zScale = d3.scaleLinear()
+            .domain([-10,10])
+            .range([0, 1]);
+    var zColor = d3.scaleLinear()
+            .domain([-10,10])
+            .range([20, 255]);
+    var zColor2 = d3.scaleLinear()
+            .domain([-10,10])
+            .range([100, 255]);
+    svg.selectAll("circle")
+            .data(x)
+            .enter()
+            .append("circle")
+            .attr("cx", function(d) {
+                return xScale(d[1]);
+            })
+            .attr("cy", function(d) {
+                return yScale(d[2]);
+            })
+           .attr("r" ,function(d){
+               return zScale(d[0]);
+           })
+           .style("fill", function(d){
+               var num = zColor(d[0]);
+               var num2 = zColor2(d[0]);
+               var str ="rgb("+num.toString()+","+num2.toString()+",200)";
+               return str;
+           });
+});
