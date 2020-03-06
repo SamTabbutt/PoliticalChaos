@@ -12,7 +12,7 @@ function elementInArray(element,array){
   return false;
 }
 
-function getList(colIndex,dataRows){
+function getUniqueList(colIndex,dataRows){
   var list = [];
   for (var singleRow = 0; singleRow < dataRows.length; singleRow++) {
     var uniqueName = dataRows[singleRow].split(',')[colIndex]
@@ -29,31 +29,33 @@ function fillSelector(list,name){
   }
 }
 
-function populateStateData(allRows,stateIndex,rowsOfInterest,voteCountIndex){
-  
+function populateData(allRows,rowsOfInterest,class_){
   rowOfInterest = 0;
-      for (var i=0;i<rowsOfInterest.length;i++){
-        if ($("#state").val()==allRows[rowsOfInterest[i]].split(',')[stateIndex]){
-          rowOfInterest = rowsOfInterest[i];
-        }
-      }
-      voteCount = allRows[rowOfInterest].split(',')[voteCountIndex];
-      document.getElementById('voteCount').innerHTML = voteCount;
+  var classIndex = allRows[0].split(',').indexOf(class_);
+  for (var i=0;i<rowsOfInterest.length;i++){
+    if ($("#"+class_).val()==allRows[rowsOfInterest[i]].split(',')[classIndex]){
+      rowOfInterest = rowsOfInterest[i];
+    }
+  }
+  $("."+class_).each(function(index) {
+    var fieldName = $(this).attr('id');
+    var colIndex = allRows[0].split(',').indexOf(fieldName);
+    var count = allRows[rowOfInterest].split(',')[colIndex];
+    document.getElementById(fieldName).innerHTML = count;
+  });
 }
 
 function successFunction(data) {
     var allRows = data.split(/\r?\n|\r/);
     var candIndex = allRows[0].split(',').indexOf('Candidate');
     var stateIndex = allRows[0].split(',').indexOf('state');
-    var candidateList = getList(candIndex,allRows);
-    var stateList = getList(stateIndex,allRows);
+    var candidateList = getUniqueList(candIndex,allRows);
+    var stateList = getUniqueList(stateIndex,allRows);
 
     fillSelector(candidateList,'Candidate');
     fillSelector(stateList,'state');
 
     var rowsOfInterest = [];
-    var delCountIndex = allRows[0].split(',').indexOf('delegates_total');
-    var droppedIndex = allRows[0].split(',').indexOf('dropped_out');
     $("#Candidate").change(function(){
       rowsOfInterest = [];
       for (var i = 0;i<allRows.length;i++){
@@ -61,16 +63,19 @@ function successFunction(data) {
           rowsOfInterest.push(i);
         }
       }
-      delCount = allRows[rowsOfInterest[0]].split(',')[delCountIndex];
-      dropped = allRows[rowsOfInterest[0]].split(',')[droppedIndex];
-      document.getElementById('delegateCount').innerHTML = delCount;
-      document.getElementById('dropped').innerHTML = dropped;
-      populateStateData(allRows,stateIndex,rowsOfInterest,voteCountIndex);
+      populateData(allRows,rowsOfInterest,'Candidate')
+      populateData(allRows,rowsOfInterest,'state');
     });
 
-    var voteCountIndex = allRows[0].split(',').indexOf('vote_count');
     $("#state").change(function(){
-      populateSateData(allRows,stateIndex,rowsOfInterest,voteCountIndex);
+      populateData(allRows,rowsOfInterest,'state');
     });
 
   }
+
+$(".set").click(function(){
+  var dim = $(this).attr('class')[4];
+  var vari = $(this).attr('for');
+  document.getElementById(dim).innerHTML = document.getElementById(vari).innerHTML;
+  document.getElementById(dim).value = document.getElementById(vari).innerHTML;
+});
