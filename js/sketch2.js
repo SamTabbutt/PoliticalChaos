@@ -35,8 +35,8 @@ $('#System').change(function(){
 });
 
 function setup() {
-  vis = createCanvas(700, 700, WEBGL); //Create 3D canvas
-  vis.position(300,0)
+  vis = createCanvas(2*window.innerWidth/3,window.innerHeight, WEBGL); //Create 3D canvas
+  vis.position(window.innerWidth/6,0)
   scale(5);
   colorMode(HSB, 200); //Visibile spectrum (0=Red, 200=Violet)
   noStroke(); //No outlines on shapes
@@ -44,7 +44,7 @@ function setup() {
   //Create and Position Sliders
   refreshRateSlider = createSlider(0, 30, 10);
   refreshRateSlider.position(0, 200);
-  circleSizeSlider = createSlider(0, 20, 2);
+  circleSizeSlider = createSlider(.7, 20, 2);
   circleSizeSlider.position(0, 230);
   fadeRateSlider = createSlider(0, 100, 1);
   fadeRateSlider.position(0, 260);

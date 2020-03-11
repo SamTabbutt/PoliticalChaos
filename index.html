@@ -7,12 +7,26 @@
         <script src="https://d3js.org/d3.v5.min.js"></script>
         <script src="js/p5.js"></script>
         <script src="js/p5.sound.js"></script>
+        <link rel="stylesheet" href="css/style.css">
  
     </head>
 
     <body>
+        <div id="head-column">
+            <div id="inner">
+            <h1>Explore Chaos</h1>
+            <h2>Select System</h2>
+            <select id='System'>
+            <option value='aisSys'>Ais</option>
+            <option value='lorSys'>Lorenz</option>
+            <option value='arnSys'>Arn</option>
+            <option value='burkeSys'>Burke</option>
+            <option value='rosslerSys'>Rossler</option>
+            
 
-        <h1 id="test">Explore Chaos</h1>
+        </select>
+    </div>
+        </div>
 
         <!--<label for='Candidate'>Select a Candidate</label>
         <select id='Candidate'></select><br>
@@ -41,16 +55,7 @@
         <label for='z'>Z0</label>
         <div class = 'init' id='Z' value='0'>0</div>-->
 
-        <h2>Select System</h2>
-        <select id='System'>
-            <option value='aisSys'>Ais</option>
-            <option value='lorSys'>Lorenz</option>
-            <option value='arnSys'>Arn</option>
-            <option value='burkeSys'>Burke</option>
-            <option value='rosslerSys'>Rossler</option>
-            
-
-        </select>
+        
 
         <!--<script src="js/DataReader.js"></script>-->
         <script src="js/ChaosFunctions.js"></script>
