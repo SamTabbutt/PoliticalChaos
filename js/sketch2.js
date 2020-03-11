@@ -48,6 +48,8 @@ function setup() {
   circleSizeSlider.position(0, 230);
   fadeRateSlider = createSlider(0, 100, 1);
   fadeRateSlider.position(0, 260);
+  chaosParamSlider = createSlider(0, 100, 1);
+  chaosParamSlider.position(0, 290);
   
   //Populate Queue with Chaos Curves
   curveQueue = new SimpleQueue(500);
@@ -64,13 +66,14 @@ function draw() {
   refreshRate = refreshRateSlider.value();
   circleSize = circleSizeSlider.value();
   fadeRate = fadeRateSlider.value();
+  chaosParam = chaosParamSlider.value();
   
   background(400); //Set white background
 
   orbitControl(); //Allow user to navigate 3D space
 
   //Method draws curves to canvas
-  curveQueue.displayContents(frameCount%refreshRate);
+  curveQueue.displayContents(frameCount%refreshRate,chaosParam);
   curve.display();
 
 }
@@ -121,6 +124,9 @@ class CurveWatch {
     this.lifespan = xSet.length/700;
   }
   display(){
+    if(frameCount*10>this.xSet.length){
+      frameCount=0;
+    }
     for (let i=frameCount*10; i<10*frameCount+this.lifespan; i++){
       push();
       fill(this.hue*2, 100, 200, (i-frameCount*10)*10);
@@ -172,12 +178,16 @@ class SimpleQueue {
     }
   }
   
-  displayContents(refreshIndex) {
+  displayContents(refreshIndex,chaosParam) {
+    if (chaosParam<this.contents.length){
+      this.contents[chaosParam].refresh();
+      this.contents[chaosParam].display();
+    }else{
     for (let i=refreshIndex; i<this.contents.length; i+=refreshRate){
       this.contents[i].refresh();
     }
     for (let i=0; i<this.contents.length; i++){
       this.contents[i].display();
-    }
+    }}
   }
 }
