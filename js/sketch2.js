@@ -53,7 +53,7 @@ function setup() {
   curveQueue = new SimpleQueue(500);
   
   //INSERT CHAOS FUNCTION CALL BELOW
-  systemSetUp(sys,[0,.1,0],200,.01);
+  systemSetUp(sys,[0,.1,0],100,.001);
 
 }
 
@@ -81,13 +81,12 @@ function draw() {
  * Creates curve objects and populates curve array.
  */
 function systemSetUp(sys,X0,tfin,dt){
-  dt = 10000/sys.manualScale;
   let chaosVal = sys.getChaosVar();
-  for (let i=chaosVal-.02; i<chaosVal+.02; i+=0.005){
+  for (let i=chaosVal-.02; i<chaosVal+.04; i+=0.005){
     hueVal = ((i-chaosVal+.02))*1600;
     sys.alterVarsByIndex(sys.getNumVars()-1,i);
     orb = sys.generateScaledOrbit(X0,tfin,dt);
-    if(Math.abs(i-chaosVal)<.01){
+    if(Math.abs(i-chaosVal)<.006){
       curve = new CurveWatch(orb[0],orb[1],orb[2],0);
     }
     let keepRepeat = Math.trunc(orb[0].length/200);
