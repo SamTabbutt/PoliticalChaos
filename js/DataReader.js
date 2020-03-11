@@ -1,3 +1,5 @@
+
+
 $.ajax({
     url: 'CSV/bloomPollData.csv',
     dataType: 'text',
@@ -27,6 +29,7 @@ function fillSelector(list,name){
   for (var i = 0;i<list.length;i++){
     $('#'+name).append('<option value="'+list[i]+'">'+list[i]+"</option");
   }
+  
 }
 
 function populateData(allRows,rowsOfInterest,class_){
@@ -46,6 +49,9 @@ function populateData(allRows,rowsOfInterest,class_){
 }
 
 function successFunction(data) {
+  document.getElementById('X').value = "0";
+  document.getElementById('Y').value = "0";
+  document.getElementById('Z').value = "0";
     var allRows = data.split(/\r?\n|\r/);
     var candIndex = allRows[0].split(',').indexOf('Candidate');
     var stateIndex = allRows[0].split(',').indexOf('state');

@@ -3,6 +3,7 @@ class aisSys{
         this.chaosVars = [.95,.7,.6,3.5,.25,.1];
         this.numVars = 6;
         this.currentVars = this.chaosVars;
+        this.manualScale = 100;
     }
     alterVars(vars){
         this.currentVars = vars;
@@ -16,6 +17,9 @@ class aisSys{
     getNumVars(){
         return this.numVars;
     }
+    getChaosVar(){
+        return this.chaosVars[this.numVars-1];
+    }
     f(X,vars){
         var dx = (X[2]-vars[1]) * X[0] - vars[3]*X[1];
         var dy = vars[3] * X[0] + (X[2]-vars[1]) * X[1];
@@ -23,11 +27,13 @@ class aisSys{
         return [dx,dy,dz]
     
     }
-    generateOrbit(X0){
+    generateScaledOrbit(X0,tfin,dt){
+        xVals = [];
+        yVals = [];
+        zVals = [];
         var dt = .01;
-        var sequence = [X0];
         var t = 0;
-        var tfin = 700;
+        var tfin = 200;
         let X = X0
         while (t<tfin){
             var dX = this.f(X,this.currentVars);
@@ -35,9 +41,11 @@ class aisSys{
                 return num + dX[idx]*dt;
               });
             t = t + dt;
-            sequence.push(X);
+            xVals.push(X[0]*this.manualScale);
+            yVals.push(X[1]*this.manualScale);
+            zVals.push(X[2]*this.manualScale);
         }
-        return sequence;   
+        return [xVals,yVals,zVals];   
     }
     generateBif(dimInd,dimComInd,varInd,lim,freq){
         this.alterVarsByIndex(varInd,0);
@@ -68,11 +76,29 @@ class arnSys extends aisSys{
         this.chaosVars = [5,3.8];
         this.numVars = 2;
         this.currentVars = this.chaosVars;
+        this.manualScale = 30;
     }
     f(X,vars){
         var dx = X[1];
         var dy = X[2];
         var dz = vars[0]*X[0] - vars[1]*X[1] - X[2] - X[0]**3;
+        return [dx,dy,dz]
+    
+    }
+}
+
+class lorSys extends aisSys{
+    constructor(){
+        super();
+        this.chaosVars = [28,10,8/3];
+        this.numVars = 3
+        this.currentVars = this.chaosVars;
+        this.manualScale = 5;
+    }
+    f(X,vars){
+        var dx = vars[1]*(X[1]-X[0]);
+        var dy = X[0]*(vars[0]-X[2])-X[1];
+        var dz = X[0]*X[1]-vars[2]*X[2];
         return [dx,dy,dz]
     
     }
@@ -84,6 +110,7 @@ class burkeSys extends aisSys{
         this.chaosVars = [10,4.272];
         this.numVars = 2;
         this.currentVars = this.chaosVars;
+        this.manualScale = 50;
     }
     f(X,vars){
         var dx = -1*vars[0]*(X[0]+X[1]);
@@ -97,9 +124,11 @@ class burkeSys extends aisSys{
 class chenSys extends aisSys{
     constructor(){
         super();
-        this.chaosVars = [40,3,28];
+        this.chaosVars = [35,3,28];
         this.numVars = 3;
         this.currentVars = this.chaosVars;
+        this.manualScale = .01;
+
     }
     f(X,vars){
         var dx = vars[0]*(X[1]-X[0]);
@@ -116,6 +145,7 @@ class rosslerSys extends aisSys{
         this.chaosVars = [.2,.2,5.7];
         this.numVars = 3;
         this.currentVars = this.chaosVars;
+        this.manualScale = 20;
     }
     f(X,vars){
         var dx = -1*X[1]-X[2];
@@ -146,7 +176,7 @@ function ReturnLinear() {
   }
 
 
-$( document ).ready(function() {
+/*$( document ).ready(function() {
     console.log( "ready!" );
     let system = new arnSys();
     var x = system.generateOrbit([0,0.1,0]);
@@ -188,4 +218,35 @@ $( document ).ready(function() {
                var str ="rgb("+num.toString()+","+num2.toString()+",200)";
                return str;
            });
+    $(".init").on("myCustomEvent",function(event){
+            var x0 = $('#X').val();
+            var y0 = $('#Y').val();
+            var z0 = $('#Z').val();
+            console.log(x0+", "+y0+" "+z0)
+            x = system.generateOrbit([z0,y0,z0]);
+             svg.selectAll("circle")
+            .data(x)
+            .enter()
+            .append("circle")
+            .attr("cx", function(d) {
+                return xScale(d[1]);
+            })
+            .attr("cy", function(d) {
+                return yScale(d[2]);
+            })
+           .attr("r" ,function(d){
+               return zScale(d[0]);
+           })
+           .style("fill", function(d){
+               var num = zColor(d[0]);
+               var num2 = zColor2(d[0]);
+               var str ="rgb("+num.toString()+","+num2.toString()+",200)";
+               return str;
+           });
+    });
 });
+
+
+$( "button" ).click(function () {
+    $( "#X" ).trigger( "myCustomEvent");
+});*/

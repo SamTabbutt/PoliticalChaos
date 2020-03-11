@@ -13,6 +13,7 @@ import os
 
 RCPlink = 'https://www.realclearpolitics.com/epolls/2020/president/ca/california_democratic_primary-6879.html'
 Bloomlink = 'https://www.bloomberg.com/graphics/2020-presidential-delegates-tracker/data/formatted/by_candidate.json'
+P538Link = 'https://projects.fivethirtyeight.com/trump-approval-ratings/voters/'
 local_dir = os.path.normpath(os.path.dirname(os.path.realpath(__file__))+ os.sep + os.pardir)
 print(local_dir)
 
@@ -98,3 +99,9 @@ BloomData.set_index('Candidate')
 print(BloomData.head())
 
 BloomData.to_csv(os.path.join(local_dir,"CSV","bloomPollData.csv"))
+
+
+P538Data = getHTMLContent(P538Link)
+chartDivs = P538Data.find_all('div',{'class':'charts'})
+for chart in chartDivs:
+    print(chart.prettify())

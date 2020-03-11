@@ -5,14 +5,16 @@
         <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
         <script src="https://d3js.org/d3.v5.js"></script>
         <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="js/p5.js"></script>
+        <script src="js/p5.sound.js"></script>
  
     </head>
 
     <body>
 
-        <h1 id="test">Test Page</h1>
+        <h1 id="test">Explore Chaos</h1>
 
-        <label for='Candidate'>Select a Candidate</label>
+        <!--<label for='Candidate'>Select a Candidate</label>
         <select id='Candidate'></select><br>
         <label for='delegates_total'>Total Delegate Count to Date:</label>
         <div class = 'Candidate' id='delegates_total'>No Selection</div>
@@ -37,10 +39,24 @@
         <label for='y'>Y0</label>
         <div class = 'init' id='Y' value='0'>0</div>
         <label for='z'>Z0</label>
-        <div class = 'init' id='Z' value='0'>0</div>
+        <div class = 'init' id='Z' value='0'>0</div>-->
 
+        <h2>Select System</h2>
+        <select id='System'>
+            <option value='aisSys'>Ais</option>
+            <option value='lorSys'>Lorenz</option>
+            <option value='arnSys'>Arn</option>
+            <option value='burkeSys'>Burke</option>
+            <option value='rosslerSys'>Rossler</option>
+            
+
+        </select>
+
+        <!--<script src="js/DataReader.js"></script>-->
         <script src="js/ChaosFunctions.js"></script>
-        <script src="js/DataReader.js"></script>
+        <script src="js/sketch2.js"></script>
+
+
 
 
 
